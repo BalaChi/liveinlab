@@ -1,5 +1,5 @@
 {
-  "name": "dew_track",
+  "name": "lab",
   "version": "1.0.0",
   "description": "live in lab project",
   "main": "app.js",
@@ -10,5 +10,14 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.3"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BalaChi/liveinlab.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BalaChi/liveinlab/issues"
+  },
+  "homepage": "https://github.com/BalaChi/liveinlab#readme"
 }
