@@ -1,9 +1,35 @@
-const express = require("express")
-const app = express()
+const express = require("express");
 
-app.use(express.static("public"))
+const bodyParser = require("body-parser");
 
-app.get("/public", function (req, res) {
-    res.send("<h1>Hello World!</h1>")})
+const app = express();
 
-app.listen(process.env.PORT || 9000, () => console.log("server is running"));
+
+
+app.use(bodyParser.urlencoded({extended:true}));
+// to get the post req we using body parser
+// to get the data in the req we using urlencoded
+
+
+
+
+app.get("/",function(req,res){
+res.sendFile(__dirname+"/public/index.html")
+});
+
+// __dirname -- used to get the file  path coz if we our application working on another syystem anything we dont dont know where the file for that we insted of putting tonly the file file we seding the whole file path
+app.post("/",function(req, res){
+//console.log(req.body);
+
+var num1 =req.body.email;//parser acceptsa s a text to chnage into number use Number()
+var num2 =req.body.signin;
+
+var  result = Number(num1+num2);
+
+    res.send("The result of the calculation is "+result);
+});
+
+app.listen(3000,function(){
+    console.log("server started")
+}
+);
