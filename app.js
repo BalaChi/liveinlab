@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 // to get the data in the req we using urlencoded
 
 
-port = 3000 || process.env.PORT
+port = process.env.PORT || 3000
 
 app.get("/",function(req,res){
 res.sendFile(__dirname+"/public/index.html")
