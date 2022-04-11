@@ -350,6 +350,12 @@ hr {
   hr.major {
     margin: 3em 0; }
 
+/*password altertqaion*/
+
+.pass{
+  width: 7.8cm;
+}
+
 /* Section/Article */
 section.special, article.special {
   text-align: center; }
